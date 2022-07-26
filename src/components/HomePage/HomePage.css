@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../../public/ferenc-almasi-eYpcLDXHVb0-unsplash.jpg);
+    background-size: cover;
+}
+
+.wellcome{
+    position: absolute;
+    top:10%;
+    /* left:5% ; */
+    color: ghostwhite;
+}

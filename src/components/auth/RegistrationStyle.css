@@ -1,0 +1,24 @@
+.flex-container {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    /* background-color: ghostwhite; */
+    background-image: url(../../../public/ferenc-almasi-eYpcLDXHVb0-unsplash.jpg);
+    background-size: cover;
+  }
+
+.btn{
+  width: 20px;
+  background-color: green;
+}
+
+.h1{
+  display: flex;
+  color: #2d5b67;
+  /* top:75px; */
+  justify-content: center;
+  align-items: center;
+  
+}
