@@ -12,6 +12,8 @@ import UserRegistration from './components/auth/UserRegister';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import EditModel from './components/HomePage/EditModel';
+import AddNewEditModel from './components/HomePage/AddNewEditModel';
+import WeatherPage from './components/WeatherUpdates/WeatherPage';
 
 function App() {
   return (
@@ -21,11 +23,12 @@ function App() {
           <Toolbar>
             <Typography variant="h7"  sx={{ flexGrow: 1}}>
              {!authServices.isLogged()? 
-             <Link to="/Login" ><Button variant="contained" color='primary' style={{float:"right",}} >Login</Button></Link> 
+             <Link to="/Login" ><Button variant="contained"  style={{float:"right",backgroundColor:'#3c636e'}} >Login</Button></Link> 
               :<> 
               <Link to="/" style={{color:"white",paddingRight:"1rem",fontWeight:"bold"}}>Home</Link>
               <Link to="/products" style={{color:"white",paddingRight:"1rem",fontWeight:"bold"}}>Course </Link>              
-              <Button variant="contained" color='primary' style={{float:"right",}}  onClick={()=>{
+              <Link to="/weatherUpdate" style={{color:"white",paddingRight:"1rem",fontWeight:"bold"}}>Weather Updates </Link>              
+              <Button variant="contained"  style={{float:"right",backgroundColor:'#3c636e'}}  onClick={()=>{
                 authServices.logOut();
               }}>Logout</Button>
             </>
@@ -40,7 +43,9 @@ function App() {
         <Route path="/products" element={ <Products /> } />
         <Route path="/login" element={   <UserLogin /> } />
         <Route path="/Registration" element={   <UserRegistration /> } />
-        <Route path="/EditModel" element={ <EditModel /> } />
+        <Route path="/Edit" element={ <EditModel /> } />
+        <Route path="/Add" element={ <AddNewEditModel /> } />
+        <Route path="/weatherUpdate" element={ <WeatherPage /> } />
                 {/* if no route will found new Page will comes  */}
       </Routes>
     </BrowserRouter>

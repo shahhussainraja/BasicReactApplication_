@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import authServices from "../../services/AuthServices";
 import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 
 const UserRegistration = () => {
@@ -59,13 +60,11 @@ const [errRecaptchaStyle, setErrRecaptchaStyle] = useState({
         width : "100px",
         marginLeft: "0px"
       }
-  
-
-
   }
-
+  
   return (
     <>
+    <ToastContainer  autoClose={2000}/>
       <div className="flex-container">
         <div style={cardStyles.container}>
           <Box

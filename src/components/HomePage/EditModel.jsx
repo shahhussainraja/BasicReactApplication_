@@ -116,12 +116,13 @@ const EditModel = ({ modelHandle , setModelHandle , course , setChangeHandler })
           setDescription(e.target.value);
         }}
         multiline
-        maxRows={4}
+        maxRows={3}
         fullWidth
         variant="standard"
       />
 
 
+        <div style={{marginTop:"20px"}}>
         <Button variant="contained" color="success" onClick={()=>{
           console.log("submit buttons hits");
           userService.updateCourse(course._id, {courseName,instructorName,description,link}).then((res)=>{
@@ -138,9 +139,10 @@ const EditModel = ({ modelHandle , setModelHandle , course , setChangeHandler })
           })  
         }} >Submit</Button>
         <Button variant="contained" onClick={handleClose} >Close</Button>
+      </div> 
         </Box>
       </Modal>  
-
+    
 
       </div>
         </>
